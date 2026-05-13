@@ -1,0 +1,108 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  transition: border-color 0.2s, transform 0.15s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--phase-color, #38bdf8);
+  opacity: 0.7;
+}
+
+.card:hover {
+  border-color: #2a3f55;
+  transform: translateY(-1px);
+}
+
+.phaseBadge {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 6px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--bright);
+  line-height: 1.3;
+}
+
+.abbr {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface2);
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.def {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.example {
+  font-size: 11px;
+  color: #38bdf8;
+  font-style: italic;
+  line-height: 1.5;
+  padding: 6px 10px;
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 6px;
+  border-left: 2px solid rgba(56, 189, 248, 0.3);
+}
+
+.example::before {
+  content: '"';
+}
+
+.example::after {
+  content: '"';
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--surface2);
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+}
+
+.highlight {
+  background: rgba(251, 191, 36, 0.25);
+  color: #fbbf24;
+  border-radius: 2px;
+  padding: 0 1px;
+}
