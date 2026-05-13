@@ -34,6 +34,12 @@
   margin-bottom: 24px;
 }
 
+.generating {
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
